@@ -25,10 +25,14 @@ namespace BookShop.Controllers
 			return View();
 		}
 		[HttpPost]
-		public IActionResult Create(Category category)
-		{
-			_dbContext.Categories.Add(category);
-			_dbContext.SaveChanges();
+		public IActionResult Create(Category category){ 
+		
+			if (ModelState.IsValid)
+			{
+				_dbContext.Categories.Add(category);
+				_dbContext.SaveChanges();
+				TempData["success"] = "Category Created successfully";
+			}
 			return RedirectToAction("Index");
 
 		}
