@@ -7,12 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\books\8445107a-6975-462f-b8f0-021ce5145622.png" />
+    <Content Remove="wwwroot\images\books\bee6e5f7-7377-404b-a8db-198173bb6e3c.PNG" />
+    <Content Remove="wwwroot\images\books\c30dc2f9-7275-4afd-a970-16d7a5d10fa6.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\books\" />
   </ItemGroup>
 
 </Project>
